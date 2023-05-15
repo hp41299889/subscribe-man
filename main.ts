@@ -9,7 +9,7 @@ app.use(cors());
 
 const appInit = () => {
     app.listen(appConfig.port, () => {
-        console.log('app is running on port 5000');
+        console.log('app is running on port', appConfig.port);
     });
 };
 

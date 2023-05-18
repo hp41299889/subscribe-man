@@ -5,6 +5,7 @@ export interface ServiceConfig {
 export interface AppConfig extends ServiceConfig {
   debug: string;
   environment: string;
+  jwtSecret: string;
 }
 
 export interface PostgresConfig extends ServiceConfig {

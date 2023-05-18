@@ -1,15 +1,17 @@
 import 'dotenv/config';
-import * as IF from './interface';
+
+import * as configInterface from './interface';
 
 const {env} = process;
 
-export const appConfig: IF.AppConfig = {
+export const appConfig: configInterface.AppConfig = {
   port: env.APP_PORT || 8000,
   debug: env.APP_DEBUG || 'true',
   environment: env.APP_ENVIRONMENT || 'develop',
+  jwtSecret: env.APP_JWT_SECRET || 'jwt',
 };
 
-export const postgresConfig: IF.PostgresConfig = {
+export const postgresConfig: configInterface.PostgresConfig = {
   username: env.HUIHUI_POSTGRES_USER || 'postgres',
   password: env.HUIHUI_POSTGRES_PASSWORD || 'postgres',
   host: env.HUIHUI_POSTGRES_HOST || 'localhost',
